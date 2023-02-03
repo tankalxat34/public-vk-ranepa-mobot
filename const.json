@@ -1,0 +1,57 @@
+{
+    "answers":
+    {
+        "errorMessage": {"text": "К сожалению я не понял тебя, попробуй написать слово `начать`"},
+        "hello": {"trigger": "привет,здравствуй,ку,начать,здарова,$keyboards:main:answer2:text", "text": "Привет, %s!👋\n\nДля того, чтобы получить свое расписание, нажми на кнопку `Узнать расписание`"},
+        "checkSchedule": {"trigger": "текст", "text": "Какое направление вас интересует?"},
+        "checkKurs": {"trigger": "текст", "text": "Какой курс обучения?"},
+        "sendSchedule": {"trigger": "текст", "text": "Высылаю все раписания, которые нашел на сайте:"},
+        "sendErrorMessage": {"trigger": "текст", "text": "Произошла ошибка в получении расписания! Возможно его не существует.\n\nЕсли вы считаете, что произошла ошибка:\n1) Проверьте официальный сайт на наличие необходимого расписания;\n2) Напишите [tankalxat34|мне], если на сайте расписание есть, а бот его не высылает."},
+        "checkMag": {"trigger": "текст", "text": "Вы в магистратуре?"},
+        "checkOZ": {"trigger": "текст", "text": "Ваша форма обучения?"}
+    },
+
+    "keyboards":
+    {
+        "main": {
+            "params": {"one_time": false, "iniline": false},
+            "answer1": {"text": "Узнать расписание", "color": "positive"}
+        },
+        "direction": {
+            "params": {"one_time": false, "iniline": false},
+            "answer1": {"text": "Экономика", "color": "secondary"},
+            "answer2": {"text": "Менеджмент", "color": "secondary", "next_line": true},
+            "answer3": {"text": "ГМУ", "color": "secondary"},
+            "answer4": {"text": "Юриспруденция", "color": "secondary", "next_line": true},
+            "answer5": {"text": "В главное меню", "color": "positive"}
+        },
+        "kurs": {
+            "params": {"one_time": false, "iniline": false},
+            "answer1": {"text": "1", "color": "secondary"},
+            "answer2": {"text": "2", "color": "secondary"},
+            "answer3": {"text": "3", "color": "secondary"},
+            "answer4": {"text": "4", "color": "secondary", "next_line": true},
+            "answer5": {"text": "В главное меню", "color": "positive"}
+        },
+        "mag": {
+            "params": {"one_time": false, "iniline": false},
+            "answer1": {"text": "Да", "color": "positive"},
+            "answer2": {"text": "Нет", "color": "negative", "next_line": true},
+            "answer3": {"text": "В главное меню", "color": "positive"}
+        },
+        "oz": {
+            "params": {"one_time": false, "iniline": false},
+            "answer1": {"text": "Очная", "color": "secondary"},
+            "answer2": {"text": "Очно-заочная", "color": "secondary", "next_line": true},
+            "answer3": {"text": "В главное меню", "color": "positive"}
+        },
+        "saveChoice": {
+            "params": {"one_time": false, "iniline": false},
+            "answer1": {"text": "Сохранить выбор", "color": "positive", "next_line": true},
+            "answer2": {"text": "В главное меню", "color": "secondary"}
+        }
+    },
+    
+    "adminList": "340889394",
+    "bigBoss": "340889394"
+}
