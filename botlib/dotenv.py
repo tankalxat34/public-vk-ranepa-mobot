@@ -1,14 +1,14 @@
 """
 File Parser `.env`
 
-(c) tankalxat34 - 2022
+(c) tankalxat34 - 2023
 """
 import pathlib
 import re
 
 
 def strip(s: str) -> str:
-    """Aplly classic `strip` method to string"""
+    """Apply classic `strip` method to string"""
     return s.strip()
 
 
@@ -27,15 +27,8 @@ class DotEnv:
         :param path - path to file `.env`
         """
 
-        # все кавычки
-        ptrn1 = "(.+)\=(\"[^\"]*[^\"]\")|(.+)\=(\'[^\']*.+[^\']\')"
-        # всё без кавычек, но с комментариями
-        ptrn2 = "(.+)\=([^\"|\'].*[\ |\n])"
-
-        with open(path, "r", encoding="utf-8") as env:
+        with open(path, "r", encoding=encoding) as env:
             strings = list(map(strip, env.readlines()))
-
-        # print(strings)
 
         for line in strings:
             # detect key and value
@@ -86,11 +79,3 @@ class DotEnv:
 
     def get(self, key: str) -> any:
         return self.__dict__[key]
-
-
-if __name__ == "__main__":
-    _env = DotEnv()
-
-    print(_env)
-    # print(_env.PRIVATE_KEY)
-    # print(_env.get())
