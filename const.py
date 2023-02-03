@@ -50,8 +50,6 @@ class BotKeyboards(object):
         kb.add_button("Узнать расписание", "positive")
         kb.add_line()
         kb.add_button("Создать список литературы", "positive")
-        kb.add_line()
-        kb.add_button("Расширение для СДО", "secondary")
         return kb.get_keyboard()
 
     def choiceDirection():
